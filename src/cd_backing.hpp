@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <algorithm>
 #include <array>
 #include <cstdint>
@@ -48,9 +48,9 @@ public:
 
 namespace detail{
 inline std::uint64_t fileSize(std::ifstream& f,const std::filesystem::path& p){
-    if(!f)cdFail("cannot open "+p.u8string());
+    if(!f)cdFail("cannot open "+p.string());
     f.seekg(0,std::ios::end);const auto size=f.tellg();
-    if(size<0)cdFail("cannot size "+p.u8string());
+    if(size<0)cdFail("cannot size "+p.string());
     return static_cast<std::uint64_t>(size);
 }
 inline void readAt(std::ifstream& f,std::uint64_t offset,std::uint8_t* out,std::size_t n){
@@ -68,7 +68,7 @@ public:
     DiscImage(std::filesystem::path path,ImageLayout layout):path_(std::move(path)),layout_(layout),
         file_(path_,std::ios::binary){
         const auto size=detail::fileSize(file_,path_);
-        if(!size||size%stride())cdFail("image size is not a whole number of sectors: "+path_.u8string());
+        if(!size||size%stride())cdFail("image size is not a whole number of sectors: "+path_.string());
         sectors_=size/stride();
     }
     std::uint64_t sectors() const noexcept{return sectors_;}
@@ -100,7 +100,7 @@ public:
     FileAtLba(std::filesystem::path path,std::uint32_t firstLba):path_(std::move(path)),first_(firstLba),
         file_(path_,std::ios::binary){
         size_=detail::fileSize(file_,path_);
-        if(!size_)cdFail("empty mapped file "+path_.u8string());
+        if(!size_)cdFail("empty mapped file "+path_.string());
         if(std::uint64_t(first_)+(size_+2047)/2048>100U*60U*75U-150U)cdFail("mapped file beyond 99:59:74");
     }
     std::uint32_t firstLba() const noexcept{return first_;}
@@ -115,3 +115,4 @@ private:
     std::filesystem::path path_;std::uint32_t first_;mutable std::ifstream file_;std::uint64_t size_=0;
 };
 }
+

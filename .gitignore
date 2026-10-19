@@ -53,3 +53,4 @@ __pycache__/
 *.p12
 *.pfx
 credentials.json
+build-public/

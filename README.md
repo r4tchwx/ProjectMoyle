@@ -51,3 +51,27 @@ MIT License unless otherwise stated.
 This license does not grant rights to Bugs Bunny: Lost in Time,
 its assets, trademarks, original executable code, or any other
 third-party intellectual property.
+
+## Building
+
+ProjectMoyle currently requires:
+
+- CMake 3.20 or newer
+- a C++20-compatible compiler
+- a supported build backend such as Ninja
+
+Example:
+
+```powershell
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+ctest --test-dir build --output-on-failure
+
+```
+
+The initial public source set contains only tests that use synthetic or
+redistributable data.
+
+Some development tests used by the private research archive require
+separately reviewed fixtures or original game data and are intentionally
+not included here.
