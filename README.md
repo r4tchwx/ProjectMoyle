@@ -21,7 +21,7 @@ original game on modern systems while preserving its behavior.
 
 ## Project status
 
-![ProjectMoyle development status](docs/project-status.svg)
+![ProjectMoyle development status](docs/project-status-clean.svg)
 
 The latest first-boot probe executed **245,695,024 guest instructions**,
 observed **725 VBlank edges**, completed **460 GPU uploads**, and delivered
