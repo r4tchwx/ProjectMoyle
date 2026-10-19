@@ -36,16 +36,12 @@ A visible game frame has **not** been reached yet.
 > [!NOTE]
 > **AI-assisted development**
 >
-> ProjectMoyle is openly developed with the assistance of AI tools,
-> including **ChatGPT** and **Claude**.
+> ProjectMoyle is developed with the assistance of AI tools.
 >
-> AI is used throughout development for code generation and review,
-> reverse-engineering analysis, technical research, test design,
-> documentation, and other engineering tasks.
+> AI is used during development for engineering, analysis, testing,
+> research, documentation, and related tasks.
 >
-> Project architecture, technical direction, acceptance criteria, and final
-> decisions remain human-directed. Changes are validated through review,
-> tests, and technical evidence appropriate to the task.
+> Changes are reviewed and validated before being accepted into the project.
 
 > [!WARNING]
 > **Original game data**

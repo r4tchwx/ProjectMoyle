@@ -1,94 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
-  <rect width="1200" height="760" rx="28" fill="#0b1020"/>
-  <rect x="1" y="1" width="1198" height="758" rx="27" fill="none" stroke="#29304f" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" rx="28" fill="#091224"/>
+  <rect x="1" y="1" width="1198" height="678" rx="27" fill="none" stroke="#243152" stroke-width="2"/>
 
   <style>
-    .title { font: 700 34px "Segoe UI", Arial, sans-serif; fill: #f4f6ff; }
-    .sub { font: 600 16px "Segoe UI", Arial, sans-serif; fill: #8f9ac4; letter-spacing: 2px; }
-    .label { font: 600 19px "Segoe UI", Arial, sans-serif; fill: #dce1f8; }
-    .small { font: 500 14px "Segoe UI", Arial, sans-serif; fill: #8791b7; }
-    .metric { font: 700 25px "Segoe UI", Arial, sans-serif; fill: #f4f6ff; }
-    .metricLabel { font: 600 12px "Segoe UI", Arial, sans-serif; fill: #8791b7; letter-spacing: 1px; }
-    .pill { font: 700 14px "Segoe UI", Arial, sans-serif; }
+    .title { font: 700 34px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
+    .sub { font: 500 18px "Segoe UI", Arial, sans-serif; fill: #aab4da; }
+    .section { font: 700 26px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
+    .body { font: 500 18px "Segoe UI", Arial, sans-serif; fill: #dfe5ff; }
+    .small { font: 500 14px "Segoe UI", Arial, sans-serif; fill: #8d97bd; }
+    .trackLabel { font: 600 20px "Segoe UI", Arial, sans-serif; fill: #f0f3ff; }
+    .trackMeta { font: 600 14px "Segoe UI", Arial, sans-serif; fill: #8fa8ff; letter-spacing: 1px; }
+    .value { font: 700 18px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
   </style>
 
-  <text x="52" y="66" class="title">PROJECTMOYLE</text>
-  <text x="52" y="96" class="sub">PAL SLES_017.26 · FIRST-BOOT BRING-UP</text>
+  <text x="56" y="74" class="title">PROJECTMOYLE</text>
+  <text x="56" y="108" class="sub">Bugs Bunny: Lost in Time · PAL SLES_017.26</text>
 
-  <rect x="866" y="43" width="282" height="44" rx="22" fill="#151b35"/>
-  <text x="1007" y="70" text-anchor="middle" class="small">HUMAN-DIRECTED · AI-ASSISTED</text>
-
-  <!-- Metrics -->
-  <rect x="52" y="132" width="254" height="94" rx="16" fill="#121831"/>
-  <text x="72" y="171" class="metric">245,695,024</text>
-  <text x="72" y="200" class="metricLabel">GUEST INSTRUCTIONS</text>
-
-  <rect x="326" y="132" width="254" height="94" rx="16" fill="#121831"/>
-  <text x="346" y="171" class="metric">725</text>
-  <text x="346" y="200" class="metricLabel">VBLANK EDGES</text>
-
-  <rect x="600" y="132" width="254" height="94" rx="16" fill="#121831"/>
-  <text x="620" y="171" class="metric">460</text>
-  <text x="620" y="200" class="metricLabel">GPU UPLOADS</text>
-
-  <rect x="874" y="132" width="274" height="94" rx="16" fill="#121831"/>
-  <text x="894" y="171" class="metric">517</text>
-  <text x="894" y="200" class="metricLabel">CD SECTORS DELIVERED</text>
-
-  <text x="52" y="273" class="sub">SUBSYSTEM STATUS</text>
-
-  <!-- Row 1 -->
-  <text x="66" y="318" class="label">Static recompilation</text>
-  <rect x="934" y="291" width="178" height="38" rx="19" fill="#163b36"/>
-  <text x="1023" y="316" text-anchor="middle" class="pill" fill="#76e0c1">OPERATIONAL</text>
-
-  <line x1="52" y1="345" x2="1148" y2="345" stroke="#202744"/>
-
-  <!-- Row 2 -->
-  <text x="66" y="386" class="label">Interrupts / VBlank</text>
-  <rect x="958" y="359" width="154" height="38" rx="19" fill="#182c4d"/>
-  <text x="1035" y="384" text-anchor="middle" class="pill" fill="#78b8ff">ACTIVE</text>
-
-  <line x1="52" y1="413" x2="1148" y2="413" stroke="#202744"/>
-
-  <!-- Row 3 -->
-  <text x="66" y="454" class="label">GPU command / upload path</text>
-  <rect x="958" y="427" width="154" height="38" rx="19" fill="#182c4d"/>
-  <text x="1035" y="452" text-anchor="middle" class="pill" fill="#78b8ff">ACTIVE</text>
-
-  <line x1="52" y1="481" x2="1148" y2="481" stroke="#202744"/>
-
-  <!-- Row 4 -->
-  <text x="66" y="522" class="label">CD-ROM delivery</text>
-  <rect x="958" y="495" width="154" height="38" rx="19" fill="#182c4d"/>
-  <text x="1035" y="520" text-anchor="middle" class="pill" fill="#78b8ff">ACTIVE</text>
-
-  <line x1="52" y1="549" x2="1148" y2="549" stroke="#202744"/>
-
-  <!-- Row 5 -->
-  <text x="66" y="590" class="label">SPU / DMA4</text>
-  <rect x="958" y="563" width="154" height="38" rx="19" fill="#182c4d"/>
-  <text x="1035" y="588" text-anchor="middle" class="pill" fill="#78b8ff">ACTIVE</text>
-
-  <line x1="52" y1="617" x2="1148" y2="617" stroke="#202744"/>
-
-  <!-- Bottom compact states -->
-  <text x="66" y="660" class="label">DMA6 / OTC</text>
-  <rect x="205" y="635" width="156" height="36" rx="18" fill="#46371b"/>
-  <text x="283" y="659" text-anchor="middle" class="pill" fill="#f4c96b">BRING-UP</text>
-
-  <text x="416" y="660" class="label">Overlay execution</text>
-  <rect x="604" y="635" width="132" height="36" rx="18" fill="#272a40"/>
-  <text x="670" y="659" text-anchor="middle" class="pill" fill="#9ba3c6">PENDING</text>
-
-  <text x="790" y="660" class="label">Visible frame</text>
-  <rect x="926" y="635" width="132" height="36" rx="18" fill="#272a40"/>
-  <text x="992" y="659" text-anchor="middle" class="pill" fill="#9ba3c6">PENDING</text>
-
-  <text x="52" y="716" class="small">
-    Qualitative subsystem status · not an overall completion percentage
+  <text x="56" y="168" class="section">First-boot bring-up</text>
+  <text x="56" y="202" class="body">
+    Native-port and static-recompilation project for the original PlayStation release.
   </text>
-  <text x="1148" y="716" text-anchor="end" class="small">
-    First-boot probe · 2026-10-19
-  </text>
+
+  <text x="56" y="260" class="section">Development snapshot</text>
+  <text x="56" y="288" class="small">Qualitative progress bars · not an exact overall completion percentage</text>
+
+  <!-- Track 1 -->
+  <text x="56" y="352" class="trackLabel">Static recompilation</text>
+  <text x="1090" y="352" text-anchor="end" class="value">Operational</text>
+  <rect x="56" y="372" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="372" width="1000" height="22" rx="11" fill="#5fe0c6"/>
+  <text x="56" y="422" class="trackMeta">Core recompilation path established</text>
+
+  <!-- Track 2 -->
+  <text x="56" y="474" class="trackLabel">Runtime bring-up</text>
+  <text x="1090" y="474" text-anchor="end" class="value">Active</text>
+  <rect x="56" y="494" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="494" width="860" height="22" rx="11" fill="#69a7ff"/>
+  <text x="56" y="544" class="trackMeta">Interrupts, GPU, CD-ROM and SPU activity observed</text>
+
+  <!-- Track 3 -->
+  <text x="56" y="596" class="trackLabel">Current blocker</text>
+  <text x="1090" y="596" text-anchor="end" class="value">DMA6 / OTC</text>
+  <rect x="56" y="616" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="616" width="350" height="22" rx="11" fill="#f0b44f"/>
 </svg>
