@@ -1,6 +1,6 @@
-﻿# ProjectMoyle
+# ProjectMoyle
 
-ProjectMoyle is an independent, title-focused native-port project for
+ProjectMoyle is a title-focused native-port project for
 **Bugs Bunny: Lost in Time** for the original PlayStation.
 
 The project explores static recompilation, PlayStation runtime behavior,
@@ -27,7 +27,7 @@ legally obtained copy.
 
 ## Development approach
 
-ProjectMoyle uses independently developed tooling and runtime components
+ProjectMoyle develops title-focused recompilation tooling and runtime components
 to study and reproduce the behavior required by the target title.
 
 External technical documentation and reference projects consulted during
@@ -66,7 +66,6 @@ Example:
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ctest --test-dir build --output-on-failure
-
 ```
 
 The initial public source set contains only tests that use synthetic or
