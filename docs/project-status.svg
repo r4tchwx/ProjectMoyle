@@ -1,105 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#081326"/>
-      <stop offset="100%" stop-color="#0b1a34"/>
-    </linearGradient>
-    <linearGradient id="logoFill" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8db1ff"/>
-      <stop offset="100%" stop-color="#6e8fff"/>
-    </linearGradient>
-    <linearGradient id="barCyan" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#72e2d2"/>
-      <stop offset="100%" stop-color="#63d7ca"/>
-    </linearGradient>
-    <linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#6fb0ff"/>
-      <stop offset="100%" stop-color="#5f9cff"/>
-    </linearGradient>
-    <linearGradient id="barGold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#efbc54"/>
-      <stop offset="100%" stop-color="#dfab42"/>
-    </linearGradient>
-    <linearGradient id="barGray" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#8187a6"/>
-      <stop offset="100%" stop-color="#707792"/>
-    </linearGradient>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" rx="28" fill="#091224"/>
+  <rect x="1" y="1" width="1198" height="678" rx="27" fill="none" stroke="#243152" stroke-width="2"/>
 
-    <style>
-      .title { font: 700 56px "Segoe UI", Arial, sans-serif; fill: #f4f7ff; }
-      .subtitle { font: 600 24px "Segoe UI", Arial, sans-serif; fill: #b4c0e7; }
-      .section { font: 700 42px "Segoe UI", Arial, sans-serif; fill: #f4f7ff; }
-      .body { font: 600 21px "Segoe UI", Arial, sans-serif; fill: #d7def6; }
-      .small { font: 500 17px "Segoe UI", Arial, sans-serif; fill: #98a4ca; }
-      .rowLabel { font: 700 23px "Segoe UI", Arial, sans-serif; fill: #eef2ff; }
-      .rowValue { font: 700 22px "Segoe UI", Arial, sans-serif; fill: #eef2ff; }
-      .rowMeta { font: 600 16px "Segoe UI", Arial, sans-serif; fill: #8fa1dc; }
-    </style>
-  </defs>
+  <style>
+    .title { font: 700 34px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
+    .sub { font: 500 18px "Segoe UI", Arial, sans-serif; fill: #aab4da; }
+    .section { font: 700 26px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
+    .body { font: 500 18px "Segoe UI", Arial, sans-serif; fill: #dfe5ff; }
+    .small { font: 500 14px "Segoe UI", Arial, sans-serif; fill: #8d97bd; }
+    .trackLabel { font: 600 20px "Segoe UI", Arial, sans-serif; fill: #f0f3ff; }
+    .trackMeta { font: 600 14px "Segoe UI", Arial, sans-serif; fill: #8fa8ff; letter-spacing: 1px; }
+    .value { font: 700 18px "Segoe UI", Arial, sans-serif; fill: #f5f7ff; }
+  </style>
 
-  <!-- Background -->
-  <rect width="1600" height="900" rx="32" fill="url(#bg)"/>
-  <rect x="2" y="2" width="1596" height="896" rx="30" fill="none" stroke="#2a3e73" stroke-width="3"/>
+  <text x="56" y="74" class="title">PROJECTMOYLE</text>
+  <text x="56" y="108" class="sub">Bugs Bunny: Lost in Time · PAL SLES_017.26</text>
 
-  <!-- Top left text -->
-  <text x="70" y="105" class="title">PROJECTMOYLE</text>
-  <text x="70" y="152" class="subtitle">Bugs Bunny: Lost in Time · PAL SLES_017.26</text>
+  <text x="56" y="168" class="section">First-boot bring-up</text>
+  <text x="56" y="202" class="body">
+    Native-port and static-recompilation project for the original PlayStation release.
+  </text>
 
-  <text x="70" y="248" class="section">First-boot bring-up</text>
-  <text x="70" y="300" class="body">Native-port and static-recompilation project for the original PlayStation release.</text>
+  <text x="56" y="260" class="section">Development snapshot</text>
+  <text x="56" y="288" class="small">Qualitative progress bars · not an exact overall completion percentage</text>
 
-  <text x="70" y="382" class="section">Development snapshot</text>
+  <!-- Track 1 -->
+  <text x="56" y="352" class="trackLabel">Static recompilation</text>
+  <text x="1090" y="352" text-anchor="end" class="value">Operational</text>
+  <rect x="56" y="372" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="372" width="1000" height="22" rx="11" fill="#5fe0c6"/>
+  <text x="56" y="422" class="trackMeta">Core recompilation path established</text>
 
-  <!-- Top right logo -->
-  <g transform="translate(1230,72)">
-    <!-- Bunny-ear M without outer frame -->
-    <path d="M26 152
-             C28 68, 52 35, 88 14
-             C121 32, 154 76, 183 142
-             C198 106, 224 59, 272 14
-             C311 35, 333 71, 336 152
-             L336 264
-             C336 272, 331 278, 323 278
-             C319 278, 315 276, 311 271
-             L263 212
-             C243 187, 224 161, 201 133
-             C189 191, 176 233, 167 261
-             C165 268, 159 273, 151 273
-             C143 273, 137 268, 135 261
-             C126 232, 113 189, 101 133
-             C78 161, 59 187, 39 212
-             L-9 271
-             C-13 276, -17 278, -21 278
-             C-29 278, -34 272, -34 264
-             Z"
-          fill="url(#logoFill)"
-          transform="translate(34,0) scale(0.95)"/>
-  </g>
+  <!-- Track 2 -->
+  <text x="56" y="474" class="trackLabel">Runtime bring-up</text>
+  <text x="1090" y="474" text-anchor="end" class="value">Active</text>
+  <rect x="56" y="494" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="494" width="860" height="22" rx="11" fill="#69a7ff"/>
+  <text x="56" y="544" class="trackMeta">Interrupts, GPU, CD-ROM and SPU activity observed</text>
 
-  <!-- Row 1 -->
-  <text x="70" y="470" class="rowLabel">Static recompilation</text>
-  <text x="1450" y="470" text-anchor="end" class="rowValue">Operational</text>
-  <rect x="70" y="494" width="1380" height="28" rx="14" fill="#1a2850"/>
-  <rect x="70" y="494" width="1260" height="28" rx="14" fill="url(#barCyan)"/>
-  <text x="70" y="558" class="rowMeta">Core recompilation path established</text>
-
-  <!-- Row 2 -->
-  <text x="70" y="635" class="rowLabel">Runtime bring-up</text>
-  <text x="1450" y="635" text-anchor="end" class="rowValue">Active</text>
-  <rect x="70" y="659" width="1380" height="28" rx="14" fill="#1a2850"/>
-  <rect x="70" y="659" width="1085" height="28" rx="14" fill="url(#barBlue)"/>
-  <text x="70" y="723" class="rowMeta">Interrupts, GPU, CD-ROM and SPU activity observed</text>
-
-  <!-- Row 3 -->
-  <text x="70" y="760" class="rowLabel">DMA6 / OTC bring-up</text>
-  <text x="1450" y="760" text-anchor="end" class="rowValue">In progress</text>
-  <rect x="70" y="784" width="1380" height="28" rx="14" fill="#1a2850"/>
-  <rect x="70" y="784" width="445" height="28" rx="14" fill="url(#barGold)"/>
-
-  <!-- Row 4 -->
-  <g opacity="0.92">
-    <text x="70" y="850" class="rowLabel">First visible frame</text>
-    <text x="1450" y="850" text-anchor="end" class="rowValue">Pending</text>
-    <rect x="70" y="868" width="1380" height="18" rx="9" fill="#1a2850"/>
-  </g>
+  <!-- Track 3 -->
+  <text x="56" y="596" class="trackLabel">Current blocker</text>
+  <text x="1090" y="596" text-anchor="end" class="value">DMA6 / OTC</text>
+  <rect x="56" y="616" width="1088" height="22" rx="11" fill="#1a2443"/>
+  <rect x="56" y="616" width="350" height="22" rx="11" fill="#f0b44f"/>
 </svg>
