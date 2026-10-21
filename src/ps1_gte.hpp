@@ -77,6 +77,25 @@ class Gte {
             data_[8]=static_cast<std::uint32_t>(saturate(shift(depth,12),0,4096,12));
         }
     }
+    // MVMVA mx=0 (RT) cv=3 (no translation): MACn = (RTn1*VX + RTn2*VY + RTn3*VZ) >> sf, IRn = MACn saturated (lm). The 44-bit
+    // accumulator flags are checked after every addition, exactly as project() does for the rotation part.
+    // vertex 0..2 = V0..V2 (packed XY word + Z word); vertex 3 = the IR vector (IR1..IR3, signed). The source is copied
+    // before any MAC/IR write, so IR as both input and destination reads the values from before the command.
+    void rotate(unsigned vertex,unsigned sf,bool lm) {
+        const std::array<Wide,3> v=vertex==3
+            ?std::array<Wide,3>{signed16(data_[9]),signed16(data_[10]),signed16(data_[11])}
+            :std::array<Wide,3>{signed16(data_[2*vertex]),signed16(data_[2*vertex]>>16),signed16(data_[2*vertex+1])};
+        std::array<Wide,3> acc{};
+        for(unsigned row=0;row<3;++row){
+            Wide sum=0;
+            for(unsigned col=0;col<3;++col){
+                const auto element=3*row+col;
+                sum=accumulator(row+1,sum+signed16(control_[element/2]>>(16*(element%2)))*v[col]);
+            }
+            acc[row]=sum;
+        }
+        macIr(1,acc[0],sf,lm);macIr(2,acc[1],sf,lm);macIr(3,acc[2],sf,lm);
+    }
     void depthCue(std::uint32_t colour,unsigned sf,bool lm) {
         std::uint32_t result=data_[6]&0xff000000;
         for(unsigned lane=1;lane<=3;++lane){
@@ -123,7 +142,14 @@ public:
     }
     static bool supports(std::uint32_t w) {
         if((w&0xfe000000U)!=0x4a000000U)return false;
-        switch(w&63){case 1:case 6:case 16:case 42:case 45:case 46:case 48:return true;default:return false;}
+        switch(w&63){case 1:case 6:case 16:case 42:case 45:case 46:case 48:return true;
+        // MVMVA is accepted only in the forms the PAL game uses: rotation matrix (mx=0) x V0..V2 or the IR vector (v=3), no
+        // translation vector (cv=3). Other matrices (incl. the mx=2/cv=1 form at 0x80056E74), TR/BK/FC translation and the
+        // far-colour (cv=2) quirk stay unsupported.
+        case 18:return ((w>>17)&3)==0&&((w>>13)&3)==3;
+        // SQR (square of the IR vector): MACn = IRn*IRn >> sf, IRn = saturate(MACn, lm). Any sf/lm.
+        case 40:return true;
+        default:return false;}
     }
     // Unsupported instructions do not mutate state; the caller supplies the PC diagnostic.
     bool execute(std::uint32_t w) {
@@ -145,6 +171,8 @@ public:
             data_[24]=static_cast<std::uint32_t>(product);
             data_[7]=static_cast<std::uint32_t>(saturate(shift(product,12),0,65535,18));break;
         }
+        case 18:rotate((w>>15)&3,sf,lm);break;
+        case 40:for(unsigned lane=1;lane<=3;++lane){const auto i=signed16(data_[8+lane]);macIr(lane,i*i,sf,lm);}break;
         case 16:depthCue(data_[6],sf,lm);break;
         case 42:for(unsigned n=0;n<3;++n)depthCue(data_[20],sf,lm);break;
         }

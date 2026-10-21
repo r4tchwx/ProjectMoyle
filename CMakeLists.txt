@@ -61,3 +61,22 @@ if(BUILD_TESTING)
 
 endif()
 
+
+# Additional reviewed synthetic regression tests.
+if(BUILD_TESTING)
+    add_executable(projectmoyle_gte_mvmva_sqr_test tests/gte_mvmva_sqr_test.cpp)
+    target_include_directories(projectmoyle_gte_mvmva_sqr_test PRIVATE src)
+    add_test(NAME gte_mvmva_sqr COMMAND projectmoyle_gte_mvmva_sqr_test)
+
+    find_package(Python3 REQUIRED COMPONENTS Interpreter)
+    foreach(proof_test IN ITEMS
+        recomp_proof_test recomp_temporal_proof_test
+        test_phase6d_addi_overflow test_phase6d_cop0_delay
+        test_phase6d_r3000a_model test_phase6d_regimm_link
+        test_phase6d_selfmod_fetch test_phase6d_syscall_summary)
+        add_test(NAME ${proof_test}
+            COMMAND ${Python3_EXECUTABLE} -B ${CMAKE_CURRENT_SOURCE_DIR}/tests/${proof_test}.py)
+        set_tests_properties(${proof_test} PROPERTIES
+            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    endforeach()
+endif()

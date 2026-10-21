@@ -1,0 +1,72 @@
+{
+  "public_base": "efa1ee38bcdf14b719af64c9cd80ebde6ef75015",
+  "scope": "Reviewed publication files and all reachable preserved public objects; local build/admin artifacts excluded from publication. Focused pre-audit, not a guarantee against every unknown identifying string.",
+  "build": {
+    "result": "PASS",
+    "configuration": "Debug",
+    "compiler": "Clang 20.1.2 via Zig 0.15.2",
+    "cpp_standard": 20
+  },
+  "tests": {
+    "ctest_passed": 11,
+    "ctest_failed": 0,
+    "python_cases_passed": 235,
+    "skipped": [
+      {
+        "test": "original GTE vector runtime test",
+        "reason": "External fixture intentionally excluded; executable successfully compiled."
+      }
+    ],
+    "excluded_not_executed": [
+      "test_phase6d_r3000a_differential.py",
+      "test_phase6d_copy_domain.py"
+    ]
+  },
+  "privacy": {
+    "focused_sweep": "No blocker found",
+    "public_history": {
+      "commits": 11,
+      "trees": 22,
+      "blobs": 37,
+      "svg_blobs": 3,
+      "findings": 0
+    },
+    "checked": [
+      "File and directory names, hidden tracked files",
+      "UTF-8 content and binary/magic screening",
+      "Personal paths and known developer identifier",
+      "Email attribution, secret token and key patterns",
+      "Credential assignments and embedded base64 media",
+      "Reachable commit metadata and historical blobs",
+      "SVG XML and embedded media/metadata indicators",
+      "Git LFS pointers (none found)"
+    ],
+    "limitations": [
+      "Heuristic scanning cannot prove absence of unknown personal identifiers or obfuscated secrets.",
+      "This bounded candidate excludes unreviewed runtime and provenance-sensitive inputs."
+    ]
+  },
+  "source_integrity": {
+    "public": "unchanged",
+    "private-main": "unchanged",
+    "first-boot": "unchanged",
+    "proof-engine": "unchanged"
+  },
+  "history_boundary": {
+    "baseline_object_set": "Exactly the objects reachable from the public main ancestry",
+    "private_history_imported": false,
+    "private_object_database_transferred": false,
+    "private_refs_imported": false,
+    "method": "Independent public clone followed by approved file-content reads; identical blob hashes may arise naturally from identical contents."
+  },
+  "public_preserved": [
+    "LICENSE",
+    "README.md",
+    "PROVENANCE.md",
+    "REFERENCES.md",
+    "THIRD_PARTY_NOTICES.md",
+    ".github/workflows/ci.yml",
+    "src/cd_backing.hpp"
+  ],
+  "sanitized_files": []
+}
