@@ -4,9 +4,9 @@
   "policy": "Only APPROVED add/update entries may be imported. Private files are read as content; private Git data is never transferred. All unlisted files are excluded.",
   "sources": {
     "public": "existing public repository",
-    "private-main": "private main source inventory only",
-    "first-boot": "advanced runtime working tree",
-    "proof-engine": "advanced proof-engine working tree"
+    "private-main": "private main",
+    "first-boot": "first-boot worktree",
+    "proof-engine": "proof-engine worktree"
   },
   "deny_directories": [
     ".git",
@@ -1785,10 +1785,14 @@
       "source": "first-boot",
       "path": "docs/direct-title-boot.md",
       "source_sha256": "c3b3cd2080df57a3ef57656949cd7719bf6da5f630c22d1cae7c984929de184d",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "c3b3cd2080df57a3ef57656949cd7719bf6da5f630c22d1cae7c984929de184d",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -1821,10 +1825,14 @@
       "source": "first-boot",
       "path": "docs/direct-title-foundation.md",
       "source_sha256": "624ec4ed7c72aed5e61699cc3da4c1759b8f4a32778a562c553fa878f49abaea",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "624ec4ed7c72aed5e61699cc3da4c1759b8f4a32778a562c553fa878f49abaea",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -1947,19 +1955,28 @@
       "source": "first-boot",
       "path": "docs/recomp-overlay-recognition.md",
       "source_sha256": "7ca8b1bab96ef20197e7f75c891268beb60532c02fc41c69de2796cba0589ac4",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "7ca8b1bab96ef20197e7f75c891268beb60532c02fc41c69de2796cba0589ac4",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "docs/recomp-overlay-unit.md",
       "source_sha256": "8b946d4ae2a0451d83d4c5b60c08c3d720b6f38693e77d94c9847c24175303e7",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Personal local path plus title-specific research/documentation; exclude rather than sanitize and imply provenance approval.",
-      "privacy_exclusion": true
+      "classification": "APPROVED",
+      "action": "add-sanitized",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH AFTER SANITIZATION",
+      "sanitized": true,
+      "imported_sha256": "fd17b1fc1ea63caa790fdd1566936bd293880fe8a4aea8b196f45d260195c1bc",
+      "batch": 2,
+      "sanitization": "Replaced one personal absolute example path with a neutral external-input path; technical content and provenance statements preserved."
     },
     {
       "source": "first-boot",
@@ -2163,37 +2180,53 @@
       "source": "first-boot",
       "path": "src/bios_boot.hpp",
       "source_sha256": "c77d06277192e07cb87678a04cb0372ed4057bcd80e749ed3dcd5a6127a89863",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "c77d06277192e07cb87678a04cb0372ed4057bcd80e749ed3dcd5a6127a89863",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/bios_boundary.hpp",
       "source_sha256": "149c3f95991454968038e7bb8dc1cb47c393401a35270137fbbd1609615d7dda",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "149c3f95991454968038e7bb8dc1cb47c393401a35270137fbbd1609615d7dda",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/bios_table.hpp",
       "source_sha256": "5572a0b47745a1d313de9d8d1b22d2991917d588e2284847e99271039b774ac1",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "5572a0b47745a1d313de9d8d1b22d2991917d588e2284847e99271039b774ac1",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/boot_hardware.hpp",
       "source_sha256": "0e4186963a017583e7032217acea63e0cdcebc118e77db0b9f540e3d1522fd04",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "0e4186963a017583e7032217acea63e0cdcebc118e77db0b9f540e3d1522fd04",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2208,19 +2241,27 @@
       "source": "first-boot",
       "path": "src/boot_harness.hpp",
       "source_sha256": "e5a16e3acac7d7fa7c4dbc1522b20741fed387c4cc089c2f82e24085edc42c7f",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "e5a16e3acac7d7fa7c4dbc1522b20741fed387c4cc089c2f82e24085edc42c7f",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/boot_kernel_ram.hpp",
       "source_sha256": "5c51270eeb0647f5b99b099ddc91e49014e512628e1209d6772264ce59477e78",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "5c51270eeb0647f5b99b099ddc91e49014e512628e1209d6772264ce59477e78",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2298,37 +2339,53 @@
       "source": "first-boot",
       "path": "src/closure_guard.hpp",
       "source_sha256": "29d6b3f620c9db49febd4de4e7277320f162deba8c30375b984d1a1a3ef452e2",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "29d6b3f620c9db49febd4de4e7277320f162deba8c30375b984d1a1a3ef452e2",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/first_boot.hpp",
       "source_sha256": "913af8e5becb90517d70d22017e99ae020cb1b3964a752c9f65f5c827cee2711",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "913af8e5becb90517d70d22017e99ae020cb1b3964a752c9f65f5c827cee2711",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/first_boot_cd.hpp",
       "source_sha256": "fe540595d3065d413a4a325aa1becc0aeb044708bf6aec60ad9b0e190da5efd7",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "fe540595d3065d413a4a325aa1becc0aeb044708bf6aec60ad9b0e190da5efd7",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/first_boot_main.cpp",
       "source_sha256": "164953db455190ae0891fe2212436de4dc1556ec4052740f0942e0a6bf6a56ce",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "164953db455190ae0891fe2212436de4dc1556ec4052740f0942e0a6bf6a56ce",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2370,19 +2427,27 @@
       "source": "first-boot",
       "path": "src/guarded_indirect.hpp",
       "source_sha256": "ad244e11b50ffa31978a60e1f427fc5724bb39ed188bfd1e92f91cd555899add",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "ad244e11b50ffa31978a60e1f427fc5724bb39ed188bfd1e92f91cd555899add",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/indirect_cells.hpp",
       "source_sha256": "3898579c0a202f5bd86c20c37fa60bb52adbdfc4ec91fda48b3f433e20370293",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "3898579c0a202f5bd86c20c37fa60bb52adbdfc4ec91fda48b3f433e20370293",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2406,10 +2471,14 @@
       "source": "first-boot",
       "path": "src/libcd_hle.hpp",
       "source_sha256": "1c3df66bb9d57821587a0e9c8ee9a93f276b7e5ee1045fd11ad6c91e088eece2",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "1c3df66bb9d57821587a0e9c8ee9a93f276b7e5ee1045fd11ad6c91e088eece2",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2442,37 +2511,53 @@
       "source": "first-boot",
       "path": "src/overlay_dispatch.hpp",
       "source_sha256": "03b972c58d5f11d1bd893008bff383b9ff8aaf8fef986ce78b062ec794323d79",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "03b972c58d5f11d1bd893008bff383b9ff8aaf8fef986ce78b062ec794323d79",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/overlay_recognition.cpp",
       "source_sha256": "a8b7be5b100602c13679957317746d099e5ccf58ac05e63cc2ec6b9d89f07fb2",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "a8b7be5b100602c13679957317746d099e5ccf58ac05e63cc2ec6b9d89f07fb2",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/overlay_recognition.hpp",
       "source_sha256": "2ea220d52b52057e15b542a636af26d65f7727b8463c25aaa8b50bdd9daa1c80",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "2ea220d52b52057e15b542a636af26d65f7727b8463c25aaa8b50bdd9daa1c80",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/overlay_unit.hpp",
       "source_sha256": "a83a25a559b82cd26756650fc7b254ad09bac7bef1aa9e31a9a13e030caacf80",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "a83a25a559b82cd26756650fc7b254ad09bac7bef1aa9e31a9a13e030caacf80",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2505,19 +2590,27 @@
       "source": "first-boot",
       "path": "src/recomp_context.hpp",
       "source_sha256": "1ec7f3909921090a28b646c3b04ffc9b79e45161897368d848c941749a52cae1",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "1ec7f3909921090a28b646c3b04ffc9b79e45161897368d848c941749a52cae1",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "src/recomp_dispatch.hpp",
       "source_sha256": "297bd949873b000fd96e6dd3f1342dcad303f02d8a69e9c4f9b4f24ae0915f1a",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "297bd949873b000fd96e6dd3f1342dcad303f02d8a69e9c4f9b4f24ae0915f1a",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2568,10 +2661,14 @@
       "source": "first-boot",
       "path": "src/static_table.hpp",
       "source_sha256": "d623345d09c717de3c899bd99b1b9fdabe04c57b87668ad5c271cabc9d908a60",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "d623345d09c717de3c899bd99b1b9fdabe04c57b87668ad5c271cabc9d908a60",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2613,28 +2710,40 @@
       "source": "first-boot",
       "path": "tests/boot_fixtures.hpp",
       "source_sha256": "6d3dd7d8d5cbe14aa4165f311dc2abcc0c9aa70cff544159a82f38c2dfc348c9",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "6d3dd7d8d5cbe14aa4165f311dc2abcc0c9aa70cff544159a82f38c2dfc348c9",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tests/boot_generator_test.cpp",
       "source_sha256": "1fabcdce1db5b914a5c77bbcbd72f15d6e847330498acd6d515457f9aa1fdd0e",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "1fabcdce1db5b914a5c77bbcbd72f15d6e847330498acd6d515457f9aa1fdd0e",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tests/boot_test.cpp",
       "source_sha256": "d2c10ddfe64d4a75920ff1781d515038cbdc373956ed9a631032ddabaa99806b",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "d2c10ddfe64d4a75920ff1781d515038cbdc373956ed9a631032ddabaa99806b",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2685,10 +2794,14 @@
       "source": "first-boot",
       "path": "tests/closure_fixtures.hpp",
       "source_sha256": "b8562031cb67b60823e4d5139f6062bdb677bf8dc42c03a6d99a17e3214a4487",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "b8562031cb67b60823e4d5139f6062bdb677bf8dc42c03a6d99a17e3214a4487",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2838,10 +2951,14 @@
       "source": "first-boot",
       "path": "tests/first_boot_test.cpp",
       "source_sha256": "a91287a18d00e5a56b2b035dceba3e7eb387624a710b31a396a4e891bd3cd571",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "a91287a18d00e5a56b2b035dceba3e7eb387624a710b31a396a4e891bd3cd571",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2865,10 +2982,14 @@
       "source": "first-boot",
       "path": "tests/gpu_upload_test.cpp",
       "source_sha256": "ffbf85e3ac2c9467718c4f2c3595d1f3a0ff69b39a182bcb2d8015e1ec20516b",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "ffbf85e3ac2c9467718c4f2c3595d1f3a0ff69b39a182bcb2d8015e1ec20516b",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -2973,19 +3094,27 @@
       "source": "first-boot",
       "path": "tests/overlay_dispatch_test.cpp",
       "source_sha256": "4bbb5f33687c9c4cafdac9201caecd14a00407c480bbe3399946c83e3ee07f63",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "4bbb5f33687c9c4cafdac9201caecd14a00407c480bbe3399946c83e3ee07f63",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tests/overlay_recognition_test.cpp",
       "source_sha256": "317a65d22ed07dc3d55b5e76f4d79ddc53d51c12ef8350b594bca7075eb783e9",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "317a65d22ed07dc3d55b5e76f4d79ddc53d51c12ef8350b594bca7075eb783e9",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3000,28 +3129,40 @@
       "source": "first-boot",
       "path": "tests/overlay_unit_fixture.hpp",
       "source_sha256": "8c0817be193aeb418bbfcf56c0893f023a02854dceadef7315117b34c927b996",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "8c0817be193aeb418bbfcf56c0893f023a02854dceadef7315117b34c927b996",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tests/overlay_unit_generator_test.cpp",
       "source_sha256": "e9276f40888073995c620f7c28f9b75a943b2cfc297a3087d27ea9554466f16e",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "e9276f40888073995c620f7c28f9b75a943b2cfc297a3087d27ea9554466f16e",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tests/overlay_unit_test.cpp",
       "source_sha256": "70f16294430b3495a1e05d27ad361e923a084373fb53c0938f440d43b5d2300c",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "70f16294430b3495a1e05d27ad361e923a084373fb53c0938f440d43b5d2300c",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3099,10 +3240,14 @@
       "source": "first-boot",
       "path": "tests/spu_dma_test.cpp",
       "source_sha256": "35a7786723aaabd45714e48a85c49165b6308372aaf43a9d6df841762dd48941",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "35a7786723aaabd45714e48a85c49165b6308372aaf43a9d6df841762dd48941",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3207,10 +3352,14 @@
       "source": "first-boot",
       "path": "tools/recomp/closure.hpp",
       "source_sha256": "b6e07e5238e2281120b30744ad42e550524a11d6484244b0769f1cc3a509d3f6",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "b6e07e5238e2281120b30744ad42e550524a11d6484244b0769f1cc3a509d3f6",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3225,10 +3374,14 @@
       "source": "first-boot",
       "path": "tools/recomp/closure_emit.hpp",
       "source_sha256": "06a2d768f8d05b64a09d1cc309a16dd51239dc2f8a42a75f2755ecf76b65bffb",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "06a2d768f8d05b64a09d1cc309a16dd51239dc2f8a42a75f2755ecf76b65bffb",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3243,10 +3396,14 @@
       "source": "first-boot",
       "path": "tools/recomp/direct_title_main.cpp",
       "source_sha256": "3e944cd1f29ea1c812caf29d6efb42c5e4df46657c690201883edd08dc2455b1",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "3e944cd1f29ea1c812caf29d6efb42c5e4df46657c690201883edd08dc2455b1",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3279,10 +3436,14 @@
       "source": "first-boot",
       "path": "tools/recomp/discovery.hpp",
       "source_sha256": "d76b18fe24dfd574730e523757b83c467d0acd63319b41beab8b0e5eed256c4b",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "d76b18fe24dfd574730e523757b83c467d0acd63319b41beab8b0e5eed256c4b",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3369,10 +3530,14 @@
       "source": "first-boot",
       "path": "tools/recomp/generator.hpp",
       "source_sha256": "6c9f699108811b29b2d4dade82cfa358582bd71ef107fe8a2940db2166894ab5",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "6c9f699108811b29b2d4dade82cfa358582bd71ef107fe8a2940db2166894ab5",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3396,28 +3561,40 @@
       "source": "first-boot",
       "path": "tools/recomp/overlay_main.cpp",
       "source_sha256": "f4abbd8d1b17a355757d1816748cbdb674d252a7d9be3e586acafb4040015281",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "f4abbd8d1b17a355757d1816748cbdb674d252a7d9be3e586acafb4040015281",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tools/recomp/overlay_unit.hpp",
       "source_sha256": "22db5cba4a13b7372aae1c99e7283e0ed6092e4c3ca046cb26587ef345416ced",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "22db5cba4a13b7372aae1c99e7283e0ed6092e4c3ca046cb26587ef345416ced",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tools/recomp/pal-manifest.json",
       "source_sha256": "a34423b93dd90fd16a55d39423d22ba4866f4a93ea6f52cfe94283cb5a61e237",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Title-derived table/manifest or fixture with unresolved generator provenance.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "a34423b93dd90fd16a55d39423d22ba4866f4a93ea6f52cfe94283cb5a61e237",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -3441,19 +3618,27 @@
       "source": "first-boot",
       "path": "tools/recomp/static_table_matcher.hpp",
       "source_sha256": "0ea394d7c06b79f66bde8ba067e3ce5790a7340084ae0f8b69e5e7cc9797dad0",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "0ea394d7c06b79f66bde8ba067e3ce5790a7340084ae0f8b69e5e7cc9797dad0",
+      "batch": 2
     },
     {
       "source": "first-boot",
       "path": "tools/recomp/static_tables.hpp",
       "source_sha256": "d1398101cd7258f7e634c1c177e391d18827f713dae3cf8b9f38b499ff06f861",
-      "classification": "REVIEW / EXCLUDE",
-      "action": "exclude",
-      "reason": "Not approved: title-specific/research content, unresolved dependency or provenance review required.",
-      "privacy_exclusion": false
+      "classification": "APPROVED",
+      "action": "add",
+      "reason": "Reviewed second publication batch: independently authored infrastructure, synthetic tests, or factual compatibility metadata.",
+      "privacy_exclusion": false,
+      "publication_review": "PUBLISH",
+      "sanitized": false,
+      "imported_sha256": "d1398101cd7258f7e634c1c177e391d18827f713dae3cf8b9f38b499ff06f861",
+      "batch": 2
     },
     {
       "source": "first-boot",
@@ -5205,5 +5390,85 @@
       "classification": "APPROVED",
       "reason": "Redacted validation results; no local paths or raw logs."
     }
-  ]
+  ],
+  "second_batch": {
+    "baseline": "d85875f464593803fe49a9a4fb25804b58b1d77c",
+    "imported_files": [
+      "src/bios_boot.hpp",
+      "src/bios_boundary.hpp",
+      "src/bios_table.hpp",
+      "src/boot_hardware.hpp",
+      "src/boot_harness.hpp",
+      "src/boot_kernel_ram.hpp",
+      "src/closure_guard.hpp",
+      "src/first_boot.hpp",
+      "src/first_boot_cd.hpp",
+      "src/first_boot_main.cpp",
+      "src/guarded_indirect.hpp",
+      "src/indirect_cells.hpp",
+      "src/libcd_hle.hpp",
+      "src/overlay_dispatch.hpp",
+      "src/overlay_recognition.cpp",
+      "src/overlay_recognition.hpp",
+      "src/overlay_unit.hpp",
+      "src/recomp_context.hpp",
+      "src/recomp_dispatch.hpp",
+      "src/static_table.hpp",
+      "tests/boot_fixtures.hpp",
+      "tests/boot_generator_test.cpp",
+      "tests/boot_test.cpp",
+      "tests/closure_fixtures.hpp",
+      "tests/first_boot_test.cpp",
+      "tests/gpu_upload_test.cpp",
+      "tests/overlay_dispatch_test.cpp",
+      "tests/overlay_recognition_test.cpp",
+      "tests/overlay_unit_fixture.hpp",
+      "tests/overlay_unit_generator_test.cpp",
+      "tests/overlay_unit_test.cpp",
+      "tests/spu_dma_test.cpp",
+      "tools/recomp/closure.hpp",
+      "tools/recomp/closure_emit.hpp",
+      "tools/recomp/direct_title_main.cpp",
+      "tools/recomp/discovery.hpp",
+      "tools/recomp/generator.hpp",
+      "tools/recomp/overlay_main.cpp",
+      "tools/recomp/overlay_unit.hpp",
+      "tools/recomp/static_table_matcher.hpp",
+      "tools/recomp/static_tables.hpp",
+      "tools/recomp/pal-manifest.json",
+      "docs/direct-title-boot.md",
+      "docs/direct-title-foundation.md",
+      "docs/recomp-overlay-recognition.md",
+      "docs/recomp-overlay-unit.md"
+    ],
+    "policy": "Only these 46 reviewed files are imported. Other exclude entries remain excluded even where subsequent review permits future publication. No private history or Git administrative data is imported.",
+    "still_excluded_categories": [
+      "original game inputs and assets",
+      "game-derived manual translations and raw disassembly",
+      "generated real PAL and overlay output",
+      "uncertain provenance",
+      "private research and audits",
+      "backups, caches, logs and dumps"
+    ],
+    "unresolved_human_decisions": [
+      {
+        "path": "src/bzz_archive.cpp",
+        "classification": "PROVENANCE UNCERTAIN",
+        "action": "exclude",
+        "reason": "Decoder reference authorship and redistribution provenance unresolved."
+      },
+      {
+        "path": "tests/data/gte_vectors_t5.json",
+        "classification": "PROVENANCE UNCERTAIN",
+        "action": "exclude",
+        "reason": "Supplied fixture generator/oracle provenance and redistribution permission unresolved."
+      },
+      {
+        "path": "src/global_state_native.cpp",
+        "classification": "NEEDS HUMAN DECISION",
+        "action": "exclude",
+        "reason": "Game-specific complete initializer boundary requires human decision."
+      }
+    ]
+  }
 }

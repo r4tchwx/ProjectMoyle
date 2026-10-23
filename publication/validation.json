@@ -3,14 +3,25 @@
   "scope": "Reviewed publication files and all reachable preserved public objects; local build/admin artifacts excluded from publication. Focused pre-audit, not a guarantee against every unknown identifying string.",
   "build": {
     "result": "PASS",
+    "configure_result": "PASS",
+    "full_build": true,
+    "exit_code": 0,
+    "build_system": "CMake / Ninja",
+    "archiver": "The static-library archiver failure was an environment/toolchain invocation issue. Validation used an external Zig ar wrapper known at configure time; the wrapper is not part of the publication.",
+    "input_policy": "No proprietary or uncertain input was imported to make the build pass.",
     "configuration": "Debug",
     "compiler": "Clang 20.1.2 via Zig 0.15.2",
     "cpp_standard": 20
   },
   "tests": {
-    "ctest_passed": 11,
+    "ctest_result": "PASS",
+    "ctest_total": 20,
+    "ctest_passed": 20,
+    "ctest_exit_code": 0,
+    "scope": "Full CTest run for the second publication batch; public and synthetic tests only. External-input tests remain optional and are not required for this validation.",
     "ctest_failed": 0,
     "python_cases_passed": 235,
+    "python_cases_note": "Case count retained from first-batch validation; the second-batch full CTest run passed all registered Python suites.",
     "skipped": [
       {
         "test": "original GTE vector runtime test",
@@ -68,5 +79,7 @@
     ".github/workflows/ci.yml",
     "src/cd_backing.hpp"
   ],
-  "sanitized_files": []
+  "sanitized_files": [
+    "docs/recomp-overlay-unit.md"
+  ]
 }

@@ -1,0 +1,578 @@
+{
+  "revision": "SLES_017.26 PAL",
+  "sha256": "4F8D2260BD121A69CF2C91DC3B7A01959A25ACA0756B6FFFE06707FE2CEDC43B",
+  "regions": [
+    {
+      "name": "InitGlobalStateDefaults",
+      "entry": "0x80015ec0",
+      "words": 30,
+      "confidence": "confirmed"
+    },
+    {
+      "name": "ResetGlobalStatePreservingSettings",
+      "entry": "0x80015f38",
+      "words": 36,
+      "confidence": "confirmed"
+    },
+    {
+      "name": "UpdateSplitCounter",
+      "entry": "0x8002f984",
+      "words": 26,
+      "confidence": "confirmed"
+    },
+    {
+      "name": "SubtractVec3",
+      "entry": "0x80039bf0",
+      "words": 16,
+      "confidence": "confirmed"
+    }
+  ],
+  "discovery": {
+    "load_address": "0x80014a00",
+    "scan_ranges": [],
+    "expected_calls": [
+      {
+        "caller": "0x80015f38",
+        "site": "0x80015f78",
+        "callee": "0x80015ec0"
+      },
+      {
+        "caller": "0x80051cec",
+        "site": "0x80051d14",
+        "callee": "0x800519e8"
+      },
+      {
+        "caller": "0x8004d908",
+        "site": "0x8004d998",
+        "callee": "0x8004da50"
+      },
+      {
+        "caller": "0x8004da50",
+        "site": "0x8004daa0",
+        "callee": "0x8004f494"
+      },
+      {
+        "caller": "0x8004f494",
+        "site": "0x8004f4b4",
+        "callee": "0x8004f1f4"
+      }
+    ],
+    "candidate_seeds": [
+      {
+        "entry": "0x800404cc",
+        "confidence": "derived",
+        "words": 381
+      },
+      {
+        "entry": "0x8004d908",
+        "confidence": "derived",
+        "words": 256
+      },
+      {
+        "entry": "0x800518e8",
+        "confidence": "derived",
+        "words": 256
+      },
+      {
+        "entry": "0x80051980",
+        "confidence": "derived",
+        "words": 256
+      },
+      {
+        "entry": "0x800519e8",
+        "confidence": "derived",
+        "words": 256
+      },
+      {
+        "entry": "0x80051cec",
+        "confidence": "derived",
+        "words": 256
+      }
+    ],
+    "candidate_provenance": "Frozen six phase-A candidates; scan evidence is not proof of code. No new raw-scan seeds.",
+    "expected_totals": {
+      "entries": 35,
+      "resolved": 21,
+      "calls": 47,
+      "internal_jumps": 37,
+      "other_entrypoint_jumps": 0,
+      "unresolved_jumps": 1,
+      "guarded_indirect": 3,
+      "indirect_unresolved": 15
+    },
+    "expected_guarded": [
+      {"caller":"0x800518e8", "site":"0x80051964", "lui":"0x80051948", "global_load":"0x8005194c", "slot_load":"0x8005195c", "base_register":2, "target_register":2, "offset":16, "target":"0x80053604"},
+      {"caller":"0x80051980", "site":"0x800519d0", "lui":"0x800519bc", "global_load":"0x800519c0", "slot_load":"0x800519c8", "base_register":2, "target_register":2, "offset":60, "target":"0x80053d78"},
+      {"caller":"0x80051cec", "site":"0x80051d84", "lui":"0x80051d58", "global_load":"0x80051d5c", "slot_load":"0x80051d7c", "base_register":7, "target_register":2, "offset":8, "target":"0x80053718"}
+    ],
+    "expected_new_extents": [
+      {
+        "entry": "0x800404cc",
+        "end_exclusive": "0x80040ac0"
+      },
+      {
+        "entry": "0x8004d908",
+        "end_exclusive": "0x8004da50"
+      },
+      {
+        "entry": "0x80040280",
+        "end_exclusive": "0x80040470"
+      },
+      {
+        "entry": "0x8004f1f4",
+        "end_exclusive": "0x8004f2f0"
+      }
+    ],
+    "expected_jumps": [
+      {
+        "caller": "0x8004d908",
+        "site": "0x8004d950",
+        "target": "0x8004da38",
+        "kind": "internal"
+      },
+      {
+        "caller": "0x80040280",
+        "site": "0x800402ac",
+        "target": "0x8004045c",
+        "kind": "internal"
+      }
+    ],
+    "closure": {
+      "text_begin": "0x80014a00",
+      "text_end": "0x8005e3a4",
+      "derived_words": 1024,
+      "provenance": "Phase 2C: guarded static sets from fixed cells/object fields (code-constant writers only) and bounded JR tables. Not immutability proofs; the runtime still validates captured==live and membership (src/indirect_cells.hpp). BIOS names are external psx-spx knowledge, not repo evidence.",
+      "expected_totals": {
+        "entries": 43,
+        "resolved": 37,
+        "calls": 64,
+        "internal_jumps": 89,
+        "closure_rounds": 3
+      },
+      "expected_unresolved_entries": [
+        "0x8004e704",
+        "0x8004e724",
+        "0x8004e734",
+        "0x8004ea94",
+        "0x80053718",
+        "0x800539c8"
+      ],
+      "expected_sites": [
+        {
+          "site": "0x8004db64",
+          "function": "0x8004db4c",
+          "status": "closed-cell-guarded",
+          "kind": "object-field",
+          "targets": [
+            "0x8004e4f8"
+          ]
+        },
+        {
+          "site": "0x8004e708",
+          "function": "0x8004e704",
+          "status": "bios-boundary",
+          "kind": "bios-vector",
+          "targets": []
+        },
+        {
+          "site": "0x8004e728",
+          "function": "0x8004e724",
+          "status": "bios-boundary",
+          "kind": "bios-vector",
+          "targets": []
+        },
+        {
+          "site": "0x8004e738",
+          "function": "0x8004e734",
+          "status": "bios-boundary",
+          "kind": "bios-vector",
+          "targets": []
+        },
+        {
+          "site": "0x8004eb38",
+          "function": "0x8004ea94",
+          "status": "closed-static-table",
+          "kind": "static-table",
+          "target_count": 25
+        },
+        {
+          "site": "0x800513d8",
+          "function": "0x80051238",
+          "status": "closed-static-table",
+          "kind": "static-table",
+          "target_count": 5
+        },
+        {
+          "site": "0x80051928",
+          "function": "0x800518e8",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x8004ea54",
+            "0x80051238"
+          ]
+        },
+        {
+          "site": "0x80051964",
+          "function": "0x800518e8",
+          "status": "closed-guarded-slot",
+          "kind": "libgpu-slot",
+          "targets": [
+            "0x80053604"
+          ]
+        },
+        {
+          "site": "0x800519b4",
+          "function": "0x80051980",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x8004ea54",
+            "0x80051238"
+          ]
+        },
+        {
+          "site": "0x800519d0",
+          "function": "0x80051980",
+          "status": "closed-guarded-slot",
+          "kind": "libgpu-slot",
+          "targets": [
+            "0x80053d78"
+          ]
+        },
+        {
+          "site": "0x80051ac4",
+          "function": "0x800519e8",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x8004ea54",
+            "0x80051238"
+          ]
+        },
+        {
+          "site": "0x80051aec",
+          "function": "0x800519e8",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x8004ea54",
+            "0x80051238"
+          ]
+        },
+        {
+          "site": "0x80051d84",
+          "function": "0x80051cec",
+          "status": "closed-guarded-slot",
+          "kind": "libgpu-slot",
+          "targets": [
+            "0x80053718"
+          ]
+        },
+        {
+          "site": "0x8005381c",
+          "function": "0x80053718",
+          "status": "unresolved",
+          "kind": "argument-callback",
+          "targets": []
+        },
+        {
+          "site": "0x80053b18",
+          "function": "0x800539c8",
+          "status": "unresolved",
+          "kind": "indexed-array-field",
+          "targets": []
+        },
+        {
+          "site": "0x80053bf0",
+          "function": "0x800539c8",
+          "status": "unresolved",
+          "kind": "fixed-cell",
+          "targets": []
+        },
+        {
+          "site": "0x80057230",
+          "function": "0x80057220",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x80059c90"
+          ]
+        },
+        {
+          "site": "0x80057308",
+          "function": "0x800572ec",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x80059c90"
+          ]
+        },
+        {
+          "site": "0x80057574",
+          "function": "0x80057560",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x80059c90"
+          ]
+        },
+        {
+          "site": "0x800575fc",
+          "function": "0x800575e0",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x80059c90"
+          ]
+        },
+        {
+          "site": "0x80058cfc",
+          "function": "0x80058ce0",
+          "status": "closed-cell-guarded",
+          "kind": "fixed-cell",
+          "targets": [
+            "0x8005a16c"
+          ]
+        }
+      ]
+    },
+    "direct_title": {
+      "provenance": "Phase 3: opt-in Direct TITLE execution unit generated from the Phase 2C closure plus --trap-break --bios-hle --callbacks. Static evidence only; every transfer is still validated at runtime (src/indirect_cells.hpp, src/static_table.hpp, src/closure_guard.hpp). BIOS names are external psx-spx knowledge, not repo evidence; the argument/return/effect facts used by src/bios_boundary.hpp are from the call sites.",
+      "options": [
+        "--trap-break",
+        "--bios-hle",
+        "--callbacks"
+      ],
+      "function_name": "executeDirectTitle",
+      "expected_discovery": {
+        "functions": 44,
+        "resolved": 44,
+        "calls": 64,
+        "internal_jumps": 89,
+        "closure_rounds": 3,
+        "unresolved": []
+      },
+      "expected_unit": {
+        "generated_functions": 44,
+        "generated_instructions": 2600,
+        "boundary_stubs": 0,
+        "closure_call_sites": {
+          "total": 16,
+          "libgpu_guarded_slots": 3,
+          "cell_guarded": 10,
+          "registry_empty_guarded": 1,
+          "set_guarded": 1,
+          "ring_registry_guarded": 1
+        },
+        "table_switch_sites": 2,
+        "bios_thunks": 3,
+        "break_traps": 1,
+        "return_guard_sites": 43,
+        "direct_call_sites": 64,
+        "internal_jump_sites": 89
+      },
+      "root_entrypoints": [
+        "0x80015f38",
+        "0x8002f984",
+        "0x80039bf0",
+        "0x800404cc",
+        "0x800518e8",
+        "0x80051980",
+        "0x80051cec"
+      ],
+      "bios_hle": [
+        {
+          "site": "0x8004e708",
+          "function": "0x8004e704",
+          "table": "0xb0",
+          "number": "0x35",
+          "behavior": "write(1, buffer, length): console sink, v0 = length"
+        },
+        {
+          "site": "0x8004e728",
+          "function": "0x8004e724",
+          "table": "0xb0",
+          "number": "0x5b",
+          "behavior": "record a0 (called only from the VSync timeout path)"
+        },
+        {
+          "site": "0x8004e738",
+          "function": "0x8004e734",
+          "table": "0xc0",
+          "number": "0x0a",
+          "behavior": "record (a0 in 0..3, a1) (called only from the VSync timeout path)"
+        }
+      ],
+      "break_trap": {
+        "site": "0x8004ee94",
+        "function": "0x8004ea94",
+        "code": 7,
+        "behavior": "fatal GuestBreak with guest PC and code; never resumable"
+      },
+      "callbacks": [
+        {
+          "site": "0x8005381c",
+          "status": "registry-param-guarded",
+          "targets": [
+            "0x8005367c"
+          ]
+        },
+        {
+          "site": "0x80053b18",
+          "status": "registry-ring-guarded",
+          "targets": [
+            "0x8005367c"
+          ]
+        },
+        {
+          "site": "0x80053bf0",
+          "status": "registry-empty-guarded",
+          "targets": []
+        }
+      ]
+    },
+    "boot": {
+      "provenance": "Phase 4: opt-in boot unit (--probe --boot-bios --boot-isa) generated from the PS-X EXE entry 0x80014a08 through main 0x80016414. Static evidence only: noreturn roots are the startup stub (ends in 'break 1') and main (never returns to the stub); each callback set is a writer-site pin whose target list is taken from constant callers in the EXE (evidence strings). Extra kernel entries (src/bios_table.hpp bootTable) and ADDI are enabled only by --boot-bios / --boot-isa; default Phase 3 outputs are unchanged. The expected first boundary is reached by the harness (tests/direct_title_boot.cpp), not by the generator.",
+      "options": [
+        "--probe",
+        "--boot-bios",
+        "--boot-isa"
+      ],
+      "entry": "0x80014a08",
+      "seeds": [
+        {
+          "entry": "0x80014a08",
+          "confidence": "derived",
+          "words": 64
+        },
+        {
+          "entry": "0x80016414",
+          "confidence": "derived",
+          "words": 4096
+        }
+      ],
+      "noreturn": [
+        "0x80014a08",
+        "0x80016414"
+      ],
+      "callback_sets": [
+        {
+          "site": "0x8004de40",
+          "targets": [
+            "0x8004e254",
+            "0x80048258",
+            "0x8004e374"
+          ],
+          "evidence": "InterruptCallback registrations: irq0 0x8004e22c, irq2 0x80047cf8, irq3 0x8004e348 (jal 0x8004db1c callers)"
+        },
+        {
+          "site": "0x8004e29c",
+          "targets": [
+            "0x80040b30",
+            "0x8005c6fc"
+          ],
+          "evidence": "VSyncCallbacks table 0x80061a20: writer 0x8004e2cc reached via VSyncCallback(0x8004db7c: callers 0x800164d4,0x8004467c pass 0x80040b30; 0x80044494,0x80044e40 pass 0) and 0x8004dbb0 (0x8005ab3c passes 0x8005c6fc; 0x8005ab74 passes 0)"
+        },
+        {
+          "site": "0x8004e414",
+          "targets": [
+            "0x800539c8",
+            "0x800544e4",
+            "0x8004a078",
+            "0x80048f50"
+          ],
+          "evidence": "DMACallback table 0x80061a4c: writer 0x8004e4f8 via 0x8004db4c; constant callers pass 0x800539c8,0x800544e4 (libspu/libgpu), 0x8004a078 (0x80049be8), 0x80048f50 (0x80048d64,0x800491bc); other callers pass 0 or a previously saved table value"
+        },
+        {
+          "site": "0x800482c4",
+          "targets": [
+            "0x8003e674",
+            "0x800410dc",
+            "0x80048cdc"
+          ],
+          "evidence": "CdReadyCallback cell 0x8005fdb0: writer 0x80046750; constant callers pass 0x8003e674,0x800410dc,0x80048cdc; other callers pass 0 or a previously saved value"
+        },
+        {
+          "site": "0x800482f4",
+          "targets": [
+            "0x80048ca8"
+          ],
+          "evidence": "CdSyncCallback cell 0x8005fdac: writer 0x8004673c; constant callers pass 0x80048ca8; other callers pass 0 or a previously saved value"
+        }
+      ],
+      "expected_unit": {
+        "generated_functions": 346,
+        "generated_instructions": 19302,
+        "boundary_stubs": 51,
+        "direct_call_sites": 850,
+        "internal_jump_sites": 424,
+        "table_switch_sites": 8,
+        "bios_thunks": 13,
+        "break_traps": 3,
+        "return_guard_sites": 343,
+        "closure_call_sites": {
+          "libgpu_guarded_slots": 10,
+          "cell_guarded": 27,
+          "registry_empty_guarded": 1,
+          "set_guarded": 6,
+          "ring_registry_guarded": 2,
+          "total": 46
+        }
+      },
+      "expected_run": {
+        "budget": 20000000,
+        "boundary": "ungenerated-function",
+        "boundary_pc": "0x8005a814",
+        "bios_call": "B0:0x4a InitCARD",
+        "reached_from": "0x8005a2c4 (libcard InitCARD) at 0x8005a308",
+        "step": 338917,
+        "interrupts_entered": 1,
+        "interrupts_returned": 1
+      }
+    },
+    "boot_card": {
+      "provenance": "Phase 5: variant of discovery.boot (same entry, seeds, noreturn roots and callback sets) generated with the additional --boot-card option. It models exactly one extra kernel call, B0:0x4a InitCARD, as a state-only boundary (src/bios_boot.hpp; no card, SIO0 or event state is invented) and the real harness run enables the kernel-RAM provenance guard. The Phase 4 section above is untouched and still pins the Phase 4 stop. Evidence and the remaining blocker are in docs/direct-title-libcard.md.",
+      "options": [
+        "--probe",
+        "--boot-bios",
+        "--boot-isa",
+        "--boot-card"
+      ],
+      "expected_unit": {
+        "generated_functions": 347,
+        "generated_instructions": 19305,
+        "boundary_stubs": 50,
+        "direct_call_sites": 850,
+        "internal_jump_sites": 424,
+        "table_switch_sites": 8,
+        "bios_thunks": 14,
+        "break_traps": 3,
+        "return_guard_sites": 343,
+        "closure_call_sites": {
+          "libgpu_guarded_slots": 10,
+          "cell_guarded": 27,
+          "registry_empty_guarded": 1,
+          "set_guarded": 6,
+          "ring_registry_guarded": 2,
+          "total": 46
+        }
+      },
+      "expected_run": {
+        "budget": 20000000,
+        "boundary": "ungenerated-function",
+        "boundary_pc": "0x8005a920",
+        "bios_call": "inline B0:0x56 (GetC0Table) at 0x8005a938, inside the libcard kernel-patch routine",
+        "reached_from": "0x8005a2c4 (libcard InitCARD) at 0x8005a31c, after B0:0x4a InitCARD returned",
+        "step": 339099,
+        "card_init_calls": 1,
+        "card_init_pad_enable": 0,
+        "kernel_ram_reads": 0,
+        "kernel_ram_writes": 28,
+        "kernel_ram_written_range": "[0x0000df80,0x0000dff0)",
+        "interrupts_entered": 1,
+        "interrupts_returned": 1
+      }
+    }
+  }
+}
